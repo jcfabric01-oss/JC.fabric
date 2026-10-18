@@ -1,0 +1,27 @@
+<!-- EmailJS template: Subject mein ye likhna ->  New Order {{order_id}} - {{customer_name}} -->
+<!-- Neeche ka poora code EmailJS ke template editor (Code / </> mode) mein paste karna -->
+<div style="max-width:640px; margin:0 auto; font-family:Arial,sans-serif; color:#222; font-size:15px; line-height:1.6;">
+
+  <h2 style="margin:0 0 4px;">New Order — {{order_id}}</h2>
+  <div style="color:#666; margin-bottom:18px;">{{order_date}}</div>
+
+  <h3 style="border-bottom:2px solid #222; padding-bottom:4px;">Items ordered ({{total_metres}} metre)</h3>
+  {{{order_items_html}}}
+
+  <h3 style="border-bottom:2px solid #222; padding-bottom:4px;">Bill</h3>
+  <table width="100%" cellpadding="4" cellspacing="0" style="font-size:15px;">
+    <tr><td>Subtotal</td><td align="right">{{order_subtotal}}</td></tr>
+    <tr><td>Discount</td><td align="right">{{order_discount}}</td></tr>
+    <tr><td>Shipping</td><td align="right">{{order_shipping}}</td></tr>
+    <tr><td><b>Total paid</b></td><td align="right"><b>{{order_total}}</b></td></tr>
+  </table>
+  <div style="margin-top:6px;">Razorpay payment ID: <b>{{razorpay_payment_id}}</b></div>
+
+  <h3 style="border-bottom:2px solid #222; padding-bottom:4px; margin-top:22px;">Customer details</h3>
+  <div><b>Name:</b> {{customer_name}}</div>
+  <div><b>Mobile:</b> {{customer_mobile}}</div>
+  <div><b>Email:</b> {{customer_email}}</div>
+  <div><b>Address:</b> {{customer_address}}</div>
+  <div><b>Pincode:</b> {{customer_pincode}}</div>
+
+</div>
